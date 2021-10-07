@@ -59,7 +59,7 @@
             created: function () {
                 this.$root.$on('decodedCode', function (decodedText, decodedResult) {
                     this.decodedText = decodedText;
-					alert(decodedText);
+		    window.location.href = "http://www.everanhospital.com.tw:4119/qrcode/?data=" + decodedText;
                 }.bind(this));
             }
         });
