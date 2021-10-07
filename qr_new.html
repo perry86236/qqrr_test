@@ -16,13 +16,7 @@
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
           /* 處理成功掃描 */  
 		  document.getElementById("qrtext").innerHTML = decodedText;
-	      if (decodedText.toUpperCase().startsWith("SMSTO:1922:")) {
-              var t = decodedText.split(":", 3),
-              r= t[1],
-              a= t[2],
-		      o = "sms:" + r + "&body=" + a; // to-do 如果是android 要將&改為?
-			  window.location.href = o;
-		  }
+	      
           html5QrCode.clear();
      };
      const config = { fps: 10, qrbox: 800 };
