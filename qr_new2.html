@@ -29,8 +29,10 @@
 	  /* 處理成功掃描 */  
 		//document.getElementById("qrtext").innerHTML = decodedText;
 		let return_url="http://www.everanhospital.com.tw:4119/qrcode/index_test.html?";
-		if(u!="")return_url=return_url+"&u="+decodedText;
-		if(e!="")return_url=return_url+"&e="+decodedText;
+		if(u=="update")return_url=return_url+"&u="+decodedText;
+		else if(e=="update")return_url=return_url+"&e="+decodedText;
+		else if(u!="")return_url+="&u="+u;
+		else if(e!="")return_url+="&e="+e;
 		window.location.href = return_url;
 	  html5QrCode.clear();
 	};
