@@ -11,11 +11,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.0.3/html5-qrcode.min.js"></script>
 <script>
     <!-- 呼叫 html5qrcode 代入qr-reader -->
-	const html5QrCode = new Html5Qrcode("qr-reader");
+	const formatsToSupport = [
+	  Html5QrcodeSupportedFormats.QR_CODE,
+	  Html5QrcodeSupportedFormats.UPC_A,
+	  Html5QrcodeSupportedFormats.UPC_E,
+	  Html5QrcodeSupportedFormats.UPC_EAN_EXTENSION,
+	];
+	const html5QrCode = new Html5Qrcode("qr-reader",{
+	    fps: 10,
+	    qrbox: { width: 800	, height: 800 },
+	    formatsToSupport: formatsToSupport
+	  },false);
+	
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
           /* 處理成功掃描 */  
-		//document.getElementById("qrtext").innerHTML = decodedText;
-	         window.location.href = "http://www.everanhospital.com.tw:4119/qrcode/?data=" + decodedText;
+	//document.getElementById("qrtext").innerHTML = decodedText;
+	  window.location.href = "http://www.everanhospital.com.tw:4119/qrcode/?data=" + decodedText;
           html5QrCode.clear();
      };
 
