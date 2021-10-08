@@ -18,7 +18,9 @@
 	  Html5QrcodeSupportedFormats.UPC_EAN_EXTENSION,
 	];
 	const html5QrCode = new Html5Qrcode("qr-reader",{
-	    formatsToSupport: formatsToSupport
+	 	fps: 10,
+		qrbox: 800,
+	    	formatsToSupport: formatsToSupport
 	  },false);
 	
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
