@@ -11,7 +11,7 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.0.3/html5-qrcode.min.js"></script>
 <script>
-	
+	var url=location.href;
 	const html5QrCode = new Html5Qrcode("qr-reader");
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
 	  /* 處理成功掃描 */  
