@@ -28,8 +28,10 @@
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
 	  /* 處理成功掃描 */  
 		//document.getElementById("qrtext").innerHTML = decodedText;
-		let return_url="http://www.everanhospital.com.tw:4119/qrcode/index_test.html?"+((u!="")?"&u="+decodedText:"")+((e!="")?"&e="+decodedText:"");
-		 window.location.href = return_url;
+		let return_url="http://www.everanhospital.com.tw:4119/qrcode/index_test.html?";
+		if(u!="")retrun_url+="&u="+decodedText;
+		if(e!="")retrun_url+="&u="+decodedText;
+		window.location.href = return_url;
 	  html5QrCode.clear();
 	};
 	const config = { fps: 10, qrbox: 800 };
