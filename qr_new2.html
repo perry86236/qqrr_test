@@ -12,11 +12,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.0.3/html5-qrcode.min.js"></script>
 <script>
 	var url=location.href;
+	var [u,e,i,o]=["","","",""];
+	if(url.indexOf('?')!=-1)
+	{
+		var ary = url.split('?')[1].split('&');
+		for(i=0;i<=ary.length-1;i++)
+		{
+			if(ary[i].split('=')[0] == 'u')
+				u = ary[i].split('=')[1];
+            if(ary[i].split('=')[0] == 'e')
+				e = ary[i].split('=')[1];
+		}
+	}
 	const html5QrCode = new Html5Qrcode("qr-reader");
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
 	  /* 處理成功掃描 */  
 		//document.getElementById("qrtext").innerHTML = decodedText;
-		 window.location.href = "http://www.everanhospital.com.tw:4119/qrcode/index_test.html?data=" + decodedText;
+		let return_url="http://www.everanhospital.com.tw:4119/qrcode/index_test.html?"+(u!="")?"&u="+u:""+(e!="")?"&e="+e:""
+		 window.location.href = return_url;
 	  html5QrCode.clear();
 	};
 	const config = { fps: 10, qrbox: 800 };
