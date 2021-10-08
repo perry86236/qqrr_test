@@ -19,7 +19,13 @@
 	         window.location.href = "http://www.everanhospital.com.tw:4119/qrcode/?data=" + decodedText;
           html5QrCode.clear();
      };
-     const config = { fps: 10, qrbox: 800 };
+	const formatsToSupport = [
+	  Html5QrcodeSupportedFormats.QR_CODE,
+	  Html5QrcodeSupportedFormats.UPC_A,
+	  Html5QrcodeSupportedFormats.UPC_E,
+	  Html5QrcodeSupportedFormats.UPC_EAN_EXTENSION,
+	];
+     const config = { fps: 10, qrbox: 800 ,formatsToSupport: formatsToSupport};
 	// 直接開啟後面鏡頭
 	<!-- 開啟前置鏡頭 -->
 	<!-- html5QrCode.start({ facingMode: "user" }, config, qrCodeSuccessCallback); -->
