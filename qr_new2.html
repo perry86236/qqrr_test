@@ -20,8 +20,12 @@
 		{
 			if(ary[i].split('=')[0] == 'u')
 				u = ary[i].split('=')[1];
-            		else if(ary[i].split('=')[0] == 'e')
+            else if(ary[i].split('=')[0] == 'e')
 				e = ary[i].split('=')[1];
+			else if(ary[i].split('=')[0] == 'i')
+				i = ary[i].split('=')[1];
+			else if(ary[i].split('=')[0] == 'o')
+				o = ary[i].split('=')[1];
 		}
 	}
 	const html5QrCode = new Html5Qrcode("qr-reader");
@@ -32,7 +36,11 @@
 		if(u=="update")	return_url+="&u="+decodedText;
 		else if (u!="")return_url+="&u="+u;
 		if(e=="update") return_url+="&e="+decodedText;
-		else if  (e!="")return_url+="&e="+e
+		else if  (e!="")return_url+="&e="+e;
+		if(i=="update") return_url+="&i="+decodedText;
+		else if  (i!="")return_url+="&i="+i;
+		if(o=="update") return_url+="&o="+decodedText;
+		else if  (o!="")return_url+="&o="+o;
 		
 		window.location.href = return_url;
 	  html5QrCode.clear();
