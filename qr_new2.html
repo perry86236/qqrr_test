@@ -12,20 +12,20 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.0.3/html5-qrcode.min.js"></script>
 <script>
 	var url=location.href;
-	var [u,e,i,o]=["","","",""];
+	var [uu,ee,ii,oo]=["","","",""];
 	if(url.indexOf('?')!=-1)
 	{
 		var ary = url.split('?')[1].split('&');
 		for(i=0;i<=ary.length-1;i++)
 		{
 			if(ary[i].split('=')[0] == 'u')
-				u = ary[i].split('=')[1];
+				uu = ary[i].split('=')[1];
             else if(ary[i].split('=')[0] == 'e')
-				e = ary[i].split('=')[1];
+				ee = ary[i].split('=')[1];
 			else if(ary[i].split('=')[0] == 'i')
-				i = ary[i].split('=')[1];
+				ii = ary[i].split('=')[1];
 			else if(ary[i].split('=')[0] == 'o')
-				o = ary[i].split('=')[1];
+				oo = ary[i].split('=')[1];
 		}
 	}
 	const html5QrCode = new Html5Qrcode("qr-reader");
@@ -34,13 +34,13 @@
 		//document.getElementById("qrtext").innerHTML = decodedText;
 		let return_url="http://www.everanhospital.com.tw:4119/qrcode/index_test.html?";
 		if(u=="update")	return_url+="&u="+decodedText;
-		else if (u!="")return_url+="&u="+u;
+		else if (u!="")return_url+="&u="+uu;
 		if(e=="update") return_url+="&e="+decodedText;
-		else if  (e!="")return_url+="&e="+e;
+		else if  (e!="")return_url+="&e="+ee;
 		if(i=="update") return_url+="&i="+decodedText;
-		else if  (i!="")return_url+="&i="+i;
+		else if  (i!="")return_url+="&i="+ii;
 		if(o=="update") return_url+="&o="+decodedText;
-		else if  (o!="")return_url+="&o="+o;
+		else if  (o!="")return_url+="&o="+oo;
 		
 		window.location.href = return_url;
 	  html5QrCode.clear();
