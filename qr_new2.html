@@ -33,14 +33,14 @@
 	  /* 處理成功掃描 */  
 		//document.getElementById("qrtext").innerHTML = decodedText;
 		let return_url="http://www.everanhospital.com.tw:4119/qrcode/index_test.html?";
-		if(u=="update")	return_url+="&u="+decodedText;
-		else if (u!="")return_url+="&u="+uu;
-		if(e=="update") return_url+="&e="+decodedText;
-		else if  (e!="")return_url+="&e="+ee;
-		if(i=="update") return_url+="&i="+decodedText;
-		else if  (i!="")return_url+="&i="+ii;
+		if(uu=="update")	return_url+="&u="+decodedText;
+		else if (uu!="")return_url+="&u="+uu;
+		if(ee=="update") return_url+="&e="+decodedText;
+		else if  (ee!="")return_url+="&e="+ee;
+		if(ii=="update") return_url+="&i="+decodedText;
+		else if  (ii!="")return_url+="&i="+ii;
 		if(o=="update") return_url+="&o="+decodedText;
-		else if  (o!="")return_url+="&o="+oo;
+		else if  (oo!="")return_url+="&o="+oo;
 		
 		window.location.href = return_url;
 	  html5QrCode.clear();
