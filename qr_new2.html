@@ -33,7 +33,7 @@
 	const html5QrCode = new Html5Qrcode("qr-reader");
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
 	  /* 處理成功掃描 */  
-		decodedText=encodeURI(decodedText)
+		decodedText=encodeURIComponent(decodedText)
 		//document.getElementById("qrtext").innerHTML = decodedText;
 		let return_url="http://www.everanhospital.com.tw:4119/qrcode/?";
 		if(uu=="update")	return_url+="&u="+decodedText;
