@@ -32,7 +32,7 @@
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
 	  /* 處理成功掃描 */  
 		//document.getElementById("qrtext").innerHTML = decodedText;
-		let return_url="http://www.everanhospital.com.tw:4119/qrcode/index_test.html?";
+		let return_url="http://www.everanhospital.com.tw:4119/qrcode/?";
 		if(uu=="update")	return_url+="&u="+decodedText;
 		else if (uu!="")return_url+="&u="+uu;
 		if(ee=="update") return_url+="&e="+decodedText;
