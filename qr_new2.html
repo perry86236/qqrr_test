@@ -12,7 +12,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.0.3/html5-qrcode.min.js"></script>
 <script>
 	var url=location.href;
-	var [uu,ee,ii,oo,post]=["","","","",""];
+	var [uu,ee,ii,oo]=["","","",""];
 	if(url.indexOf('?')!=-1)
 	{
 		var ary = url.split('?')[1].split('&');
@@ -26,8 +26,6 @@
 				ii = ary[i].split('=')[1];
 			else if(ary[i].split('=')[0] == 'o')
 				oo = ary[i].split('=')[1];
-			else if(ary[i].split('=')[0] == 'post')
-				post = ary[i].split('=')[1];
 		}
 	}
 	const html5QrCode = new Html5Qrcode("qr-reader");
