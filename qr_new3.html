@@ -33,7 +33,7 @@
 	  /* 處理成功掃描 */  
 		decodedText=encodeURIComponent(decodedText)
 		//document.getElementById("qrtext").innerHTML = decodedText;
-		let return_url="http://www.everanhospital.com.tw:4119/qrcode/index_2?";
+		let return_url="http://www.everanhospital.com.tw:4119/qrcode/index_2.html?";
 		if(uu=="update")	return_url+="&u="+decodedText;
 		else if (uu!="")return_url+="&u="+uu;
 		if(ee=="update") return_url+="&e="+decodedText;
