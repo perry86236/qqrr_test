@@ -33,7 +33,11 @@
 	};
 	const config = { fps: 20, 
 			//qrbox: 800 ,
-			aspectRatio: 0.6};
+			aspectRatio: 0.6,
+		       experimentalFeatures: {
+        			useBarCodeDetectorIfSupported: true
+    				}
+		       };
 	// 直接開啟後面鏡頭
 	html5QrCode.start({ 
 	  facingMode: "environment" }, 
