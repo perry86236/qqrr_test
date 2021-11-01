@@ -18,11 +18,12 @@
 	const html5QrCode = new Html5Qrcode("qr-reader");
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
 	  /* 處理成功掃描 */  
-		let return_url="http://www.everanhospital.com.tw:4119/qrcode/index_1029.html?";
-		decodedText=encodeURIComponent(decodedText)
-		return_url+="text="+decodedText;
+		//let return_url="http://www.everanhospital.com.tw:4119/qrcode/index_1029.html?";
+		//decodedText=encodeURIComponent(decodedText)
+		//return_url+="text="+decodedText;
 		//document.getElementById("qrtext").innerHTML = decodedText;
-		window.location.href = return_url;
+		//window.location.href = return_url;
+		parent.postMessage('QR_text', decodedText)
 
 	};
 	const config = { fps: 3, 
