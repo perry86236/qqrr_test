@@ -15,10 +15,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.0.3/html5-qrcode.min.js"></script>
 <script>
 	function sendMsg(mm) {
-		window.parent.postMessage(){
+		window.parent.postMessage(
 			{data:mm},
 			"*"
-		}
+			);
 	}
 	const html5QrCode = new Html5Qrcode("qr-reader");
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
