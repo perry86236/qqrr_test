@@ -5,9 +5,9 @@
 </head>
 <body>
     <!-- 條碼顯示的內容顯示在 qr-reader-results -->
-    <!--<div id="qr-reader-results"><h1 id="qrtext"></h1></div>-->
+    <!--<div id="qr-reader-results"><h1 id="qrtext">123</h1></div>-->
 	<!-- 掃描用 -->
-    <div id="qr-reader" style="width:100%"></div>    123
+    <div id="qr-reader" style="width:100%"></div>   
 </body>
 <script src="https://unpkg.com/html5-qrcode"></script>
 <script>
@@ -24,6 +24,7 @@
 		
           html5QrCode.clear();
      };
+	html5QrCode.applyVideoConstraints({ focusMode: "continuous", advanced: [ {zoom: isAndroid ? 1.5 : 2.0 } ]})
      const config = { fps: 10, qrbox: 800  ,experimentalFeatures: {
                 useBarCodeDetectorIfSupported: true
             },};
