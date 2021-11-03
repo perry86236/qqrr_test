@@ -16,7 +16,8 @@
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
           /* 處理成功掃描 */  
 		//document.getElementById("qrtext").innerHTML = decodedText;
-	         window.location.href = "http://www.everanhospital.com.tw:4119/qrcode/?data=" + decodedText;
+	        // window.location.href = "http://www.everanhospital.com.tw:4119/qrcode/?data=" + decodedText;
+		alert(decodedText)
           html5QrCode.clear();
      };
      const config = { fps: 10, qrbox: 800  ,experimentalFeatures: {
