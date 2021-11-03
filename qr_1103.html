@@ -13,7 +13,7 @@
 <script>
     	var lastMessage;
 	var codeId = 0;
-	const html5QrCode = new Html5Qrcode("qr-reader");
+	const html5QrCode = new Html5QrcodeScanner("qr-reader");
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
           /* 處理成功掃描 */  
 		if (lastMessage !== decodedText) {
@@ -27,15 +27,28 @@
 
 
 	//html5QrCode.applyVideoConstraints({ focusMode: "continuous", advanced: [ {zoom: isAndroid ? 1.5 : 2.0 } ]})
-     const config = { fps: 10//, qrbox: 800  
+     const config = { 
+            fps: 10,
+            qrbox: {width: 250, height: 250},
+            // Important notice: this is experimental feature, use it at your
+            // own risk. See documentation in
+            // mebjas@/html5-qrcode/src/experimental-features.ts
+            experimentalFeatures: {
+                useBarCodeDetectorIfSupported: true
+            },
+            rememberLastUsedCamera: true,
+            aspectRatio: 0.6
+        }
+	   /*{ fps: 10//, qrbox: 800  
 		     ,experimentalFeatures: {
                 	useBarCodeDetectorIfSupported: true
             		},
 		     videoConstraints:{ focusMode: "continuous"}//, advanced: [ {zoom: isAndroid ? 1.5 : 2.0 } ]
 		    };
+		    */
 	// 直接開啟後面鏡頭
 	
-	html5QrCode.start({ 
+	Html5QrcodeScanner.start({ 
 	  facingMode: "environment" }, 
 	  config, qrCodeSuccessCallback);
 </script>
