@@ -27,9 +27,12 @@
 
 
 	//html5QrCode.applyVideoConstraints({ focusMode: "continuous", advanced: [ {zoom: isAndroid ? 1.5 : 2.0 } ]})
-     const config = { fps: 10, qrbox: 800  ,experimentalFeatures: {
-                useBarCodeDetectorIfSupported: true
-            },};
+     const config = { fps: 10, qrbox: 800  
+		     ,experimentalFeatures: {
+                	useBarCodeDetectorIfSupported: true
+            		},
+		     videoConstraints:{ focusMode: "continuous", advanced: [ {zoom: isAndroid ? 1.5 : 2.0 } ]}
+		    };
 	// 直接開啟後面鏡頭
 	
 	html5QrCode.start({ 
