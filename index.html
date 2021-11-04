@@ -29,7 +29,18 @@
 			);
 	}
 
+	var width_1;
+	if (window.addEventListener) {
+        window.addEventListener("message", getMessage, false);
+    }
+    else{
+        window.attachEvent("onmessage", getMessage);
+    }
 	
+	function getMessage(e){
+		if (e.data.data)
+		width_1=e.data.data;
+	}
 
 	const html5QrCode = new Html5Qrcode("qr-reader", {
     			// Use this flag to turn on the feature.
@@ -51,7 +62,7 @@
 	};
 	const config = { fps: 30, 
 			//qrbox: 400 ,
-			//qrbox: {width: width_1/2, height: width_1/4},
+			qrbox: {width: width_1/2, height: width_1/4},
 			aspectRatio:0.6};
 	// 直接開啟後面鏡頭
 	html5QrCode.start({ 
