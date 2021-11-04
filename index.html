@@ -29,7 +29,7 @@
 	const html5QrCode = new Html5Qrcode("qr-reader", {
     			// Use this flag to turn on the feature.
 			    experimentalFeatures: {
-				useBarCodeDetectorIfSupported: false
+				useBarCodeDetectorIfSupported: true
 			    }
 			});
 	const qrCodeSuccessCallback = (decodedText, decodedResult) => {
