@@ -13,12 +13,12 @@
 	<div  style="height:70%;width:100%" id="qr-reader-results"><h1 id="qrtext"></h1></div>
 	-->
 </body>
-	
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.0.3/html5-qrcode.min.js"></script> 
-	
 	<!--
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.1.2/html5-qrcode.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.0.3/html5-qrcode.min.js"></script> 
 	-->
+	
+<script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+	
 <script>
 	function sendMsg(mm) {
 		window.parent.postMessage(
@@ -45,8 +45,8 @@
 
 	};
 	const config = { fps: 30, 
-			//qrbox: 400 ,
-			qrbox: {width: 500, height: 250},
+			qrbox: 400 ,
+			//qrbox: {width: 500, height: 250},
 			aspectRatio: 0.6};
 	// 直接開啟後面鏡頭
 	html5QrCode.start({ 
