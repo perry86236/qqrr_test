@@ -20,6 +20,14 @@
 <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
 	
 <script>
+	function changeFrameHeight(){
+        	var ifm= document.getElementById("qr-reader");
+        	ifm.height=document.documentElement.clientHeight*0.3;
+    	}
+	window.onresize=function(){ changeFrameHeight();}
+	changeFrameHeight()
+</script>
+<script>
 	function sendMsg(mm) {
 		window.parent.postMessage(
 			{data:mm},
