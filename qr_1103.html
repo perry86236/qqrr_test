@@ -66,11 +66,11 @@
 			aspectRatio:0.6,
 		       videoConstraints: {
         			aspectRatio: 1.77778      // <-- this would be honoured 
+			       ,facingMode: "environment" 
     			}
 		       };
 	// 直接開啟後面鏡頭
-	html5QrCode.start({ 
-	  facingMode: "environment" }, 
+	html5QrCode.start({ }, 
 	  config, qrCodeSuccessCallback); 
 </script>
 
