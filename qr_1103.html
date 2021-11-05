@@ -62,7 +62,7 @@
 	};
 	const config = { fps: 30, 
 			//qrbox: 400 ,
-			qrbox: {width: document.getElementById("qr-reader").clientWidth , height: document.getElementById("qr-reader").clientHeight},
+			qrbox: {width: document.getElementById("qr-reader").currentStyle.width , height: document.getElementById("qr-reader").currentStyle.height},
 			aspectRatio:0.6};
 	// 直接開啟後面鏡頭
 	html5QrCode.start({ 
