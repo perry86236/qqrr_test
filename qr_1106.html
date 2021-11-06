@@ -4,13 +4,18 @@
     <meta charset="utf-8">
     <title>QR_test</title>
 </head>
+<style>
+.word-break--break-all{
+  word-break: break-all;
+}
+</style>
 <body> 
    
 	<!-- 掃描用 -->
     	<div  style="height:30%;width:100%"><div id="qr-reader" style="width:100%"></div></div>
 	<!-- 條碼顯示的內容顯示在 qr-reader-results -->
 	
-	<div  style="height:70%;width:100%" id="qr-reader-results"><h1 id="qrtext" style="width:100%"></h1></div>
+	<div  style="height:70%;width:100%" id="qr-reader-results"><h1 id="qrtext" class="word-break--break-all"></h1></div>
 	
 </body>
 	<!--
