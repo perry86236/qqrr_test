@@ -1,9 +1,13 @@
 <html>
 <body>
+<button onclick="login()">liff.login()</button>
 <button onclick="scanCode()">liff.scanCode()</button>
 
-
+<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
 <script>
+function login() {
+  liff.login();
+}
 function scanCode() {
   liff
     .scanCode()
@@ -15,7 +19,7 @@ function scanCode() {
     });
 }
 </script>
-<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+
 
 </body>
 </html>
