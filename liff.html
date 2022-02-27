@@ -5,6 +5,21 @@
 
 <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
 <script>
+var liffID = '1656807495-yOzlYENv';
+
+liff.init({
+  liffId: liffID
+}).then(function() {
+  console.log('LIFF init');
+  
+  // 這邊開始寫使用其他功能
+  
+}).catch(function(error) {
+  console.log(error);
+});
+
+</script>
+<script>
 function login() {
   liff.login();
 }
