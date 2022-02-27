@@ -24,7 +24,7 @@ function login() {
   liff.login();
 }
 function scanCode() {
-  liff.scanCodeV2()
+  liff.scanCode()
     .then(result => {
       window.alert(JSON.stringify(result));
     })
