@@ -1,0 +1,21 @@
+<html>
+<body>
+<button onclick="scanCode()">liff.scanCode()</button>
+
+
+<script>
+function scanCode() {
+  liff
+    .scanCode()
+    .then(result => {
+      window.alert(JSON.stringify(result));
+    })
+    .catch(e => {
+      window.alert(e);
+    });
+}
+</script>
+<script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+
+</body>
+</html>
