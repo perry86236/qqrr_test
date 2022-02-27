@@ -9,8 +9,7 @@ function login() {
   liff.login();
 }
 function scanCode() {
-  liff
-    .scanCode()
+  liff.scanCodeV2()
     .then(result => {
       window.alert(JSON.stringify(result));
     })
